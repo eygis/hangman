@@ -34,7 +34,7 @@ def play_game
     if !GAME.status.include? '_'
         puts 'You Win!'
     else
-        puts "Sorry, you Lose. The word was: #{GAME.word}"
+        puts "Sorry, you lose. The word was: #{GAME.word}"
     end
 end
 
@@ -55,7 +55,6 @@ def process_guess(guess)
     GAME.guessed.push(guess)
     if !GAME.word.include? guess
         GAME.mistakesleft -= 1
-        puts 'Not included.'
     else
         GAME.word.split('').each_with_index do |letter, i|
             if letter == guess
