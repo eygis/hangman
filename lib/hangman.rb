@@ -49,7 +49,7 @@ end
 
 def process_guess(guess)
     if GAME.guessed.include? guess
-        puts 'Already guessed.'
+        puts 'You have already guessed that letter.'
         return
     end
     GAME.guessed.push(guess)
