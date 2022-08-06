@@ -75,6 +75,7 @@ def save_game
     File.open('saves/saved_game', 'w') do |file|
         file.puts JSON.dump(data)
     end
+    puts "\nGame Saved!\n"
 end
 
 def load_game
