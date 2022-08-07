@@ -14,7 +14,7 @@ end
 GAME = Game.new
 
 def play_game
-    puts "~~Welcome to Hangman! If you would like to load a previous game, please enter '-' now. Otherwise please type any other character to begin a new game! "
+    puts "Welcome to Hangman! If you would like to load a previous game, please enter '-' now. Otherwise please type any other character to begin a new game! "
     load_game if gets.chomp == '-'
     puts "Your word to guess is #{GAME.word.length} characters long. You can make #{GAME.mistakesleft} #{GAME.mistakesleft > 1 ? 'mistakes' : 'mistake'} before you lose.\nYou may enter '-' at any prompt to save your game.\nPlease begin by guessing one letter. Good Luck!"
     if GAME.guessed.length > 0
